@@ -6983,7 +6983,7 @@ EPUBJS.replace.hrefs = function(callback, renderer){
 			relative = EPUBJS.core.resolveUrl(directory, href);
 			
 			link.onclick = function(){
-				book.goto(relative);
+				book.goto(href);
 				return false;
 			};
 
