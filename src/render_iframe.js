@@ -136,6 +136,18 @@ EPUBJS.Render.Iframe.prototype.removeStyle = function(style){
 
 };
 
+EPUBJS.Render.Iframe.prototype.addClass = function(classname){
+
+	if(this.bodyEl) this.bodyEl.className += classname;
+
+};
+
+EPUBJS.Render.Iframe.prototype.removeClass = function(classname){
+	 var reg = new RegExp('(\\s|^)'+classname+'(\\s|$)');
+	if(this.bodyEl) this.bodyEl.className = this.bodyEl.className.replace(reg, '');
+
+};
+
 EPUBJS.Render.Iframe.prototype.addHeadTag = function(tag, attrs) {
 	var tagEl = document.createElement(tag);
 

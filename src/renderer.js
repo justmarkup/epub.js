@@ -368,6 +368,14 @@ EPUBJS.Renderer.prototype.removeStyle = function(style){
 	this.render.removeStyle(style);
 };
 
+EPUBJS.Renderer.prototype.addClass = function(classname){
+	this.render.addClass(classname);
+};
+
+EPUBJS.Renderer.prototype.removeClass = function(classname){
+	this.render.removeClass(classname);
+};
+
 //-- HEAD TAGS
 EPUBJS.Renderer.prototype.applyHeadTags = function(headTags) {
 	for ( var headTag in headTags ) {

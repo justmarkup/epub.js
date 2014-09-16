@@ -40,6 +40,11 @@
             
             Book.renderTo("area");
 
+            Book.ready.all.then(function(){
+              Book.addClass('testclass');
+            });
+            
+
         </script>
     </body>
 </html>
